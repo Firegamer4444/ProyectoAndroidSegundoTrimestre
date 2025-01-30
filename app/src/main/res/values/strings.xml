@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ProyectoAndroidSegundoTrimestre</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="salir">Salir</string>
+    <string name="pagina_principal">Pagina principal</string>
+    <string name="grabadoraAudio">Grabadora de audio</string>
+    <string name="funcionalidadesVarias">Funcionalidades varias</string>
+</resources>

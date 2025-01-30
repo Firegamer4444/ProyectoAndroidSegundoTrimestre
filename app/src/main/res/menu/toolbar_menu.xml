@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/retrocesoOpcion"
+        android:title=""
+        android:icon="@android:drawable/ic_menu_revert"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/paginaPrincipalOpcion"
+        android:title="@string/pagina_principal"
+        android:orderInCategory="200"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/grabadoraAudioOpcion"
+        android:title="@string/grabadoraAudio"
+        android:orderInCategory="300"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/funcionalidadesVariasOpcion"
+        android:title="@string/funcionalidadesVarias"
+        android:orderInCategory="400"
+        app:showAsAction="never"/>
+
+</menu>
