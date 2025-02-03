@@ -62,6 +62,32 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.869" />
 
+        <Button
+            android:id="@+id/eliminarButton"
+            android:layout_width="88dp"
+            android:layout_height="33dp"
+            android:text="Eliminar"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toEndOf="@+id/videojuegoImageView"
+            app:layout_constraintTop_toBottomOf="@+id/comentarioTextView"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/modificarButton"
+            android:layout_width="92dp"
+            android:layout_height="33dp"
+            android:text="Modificar"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toEndOf="@+id/eliminarButton"
+            app:layout_constraintTop_toBottomOf="@+id/comentarioTextView"
+            app:layout_constraintVertical_bias="1.0" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

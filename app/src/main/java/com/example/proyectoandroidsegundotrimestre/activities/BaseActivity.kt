@@ -95,7 +95,7 @@ abstract class BaseActivity : AppCompatActivity() {
     // muestra el dialogo de la informacion de la aplicacion
     private fun mostrarDialogoAcercaDe(){
         val builder = AlertDialog.Builder(this)
-        builder.setMessage("Nombre app: Proyecto android primer trimestre\nVersion: 1.0\nDesarollador: Diego García Hernández\n")
+        builder.setMessage("Nombre app: Proyecto android segundo trimestre\nVersion: 1.0\nDesarollador: Diego García Hernández\n")
             .setTitle("Acerca de")
             .setPositiveButton("Cerrar",
                 DialogInterface.OnClickListener { dialog, which -> })

@@ -23,7 +23,7 @@
             app:menu="@menu/drawer_menu"
             app:headerLayout="@layout/drawer_header" />
 
-        <include layout="@layout/toolbar"/>
+        <include layout="@layout/toolbar" android:id="@+id/toolbarLayout"/>
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -37,5 +37,14 @@
             android:id="@+id/videojuegosRecyclerView"/>
 
     </androidx.drawerlayout.widget.DrawerLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_anchor="@+id/drawerLayout"
+        app:layout_anchorGravity="end|bottom"
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
