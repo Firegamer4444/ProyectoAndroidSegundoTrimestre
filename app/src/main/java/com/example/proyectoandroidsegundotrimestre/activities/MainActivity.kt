@@ -33,7 +33,6 @@ class MainActivity : BaseActivity(){
 
     var listaResenias = mutableListOf<ReseniaModel>()
 
-    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
