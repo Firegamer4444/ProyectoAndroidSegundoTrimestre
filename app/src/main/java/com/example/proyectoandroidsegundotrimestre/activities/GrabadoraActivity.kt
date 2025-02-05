@@ -82,20 +82,50 @@ class GrabadoraActivity : BaseActivity() {
                 if (isAudioPlaying) {
                     // Si se esta reproduciondo se detiene
                     stopPlaying()
-                    // Cambiamos el texto del botón a "Reproducir"
-                    binding.reproducirButton.text = "Reproducir"
+                    // Se cambia el icono
+                    binding.reproducirButton.setImageResource(android.R.drawable.ic_media_play)
                 }
                 else {
                     // Si existe un archivo grabado, lo reproducimos
                     startPlaying()
-                    // Cambiamos el texto del botón a "Detener"
-                    binding.reproducirButton.text = "Detener"
+                    // Se cambia el icono
+                    binding.reproducirButton.setImageResource(android.R.drawable.ic_media_pause)
                 }
             } else {
                 // Si no hay archivo grabado, mostramos un mensaje de error
                 Toast.makeText(this, "No hay archivo de audio grabado.", Toast.LENGTH_SHORT).show()
             }
         }
+
+        // configuramos el listener de la seekbar
+        binding.audioSeekBar.setOnSeekBarChangeListener(object : android.widget.SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: android.widget.SeekBar?, progress: Int, fromUser: Boolean) {
+                if (isAudioPlaying) {
+                    mediaPlayer?.setVolume(progress/100f, progress/100f)
+                }
+            }
+
+            override fun onStartTrackingTouch(seekBar: android.widget.SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(seekBar: android.widget.SeekBar?) {
+            }
+        })
+
+        binding.velocidadSeekBar.setOnSeekBarChangeListener(object : android.widget.SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: android.widget.SeekBar?, progress: Int, fromUser: Boolean) {
+                if (isAudioPlaying) {
+                    mediaPlayer?.playbackParams?.setSpeed(progress/100f)
+                }
+            }
+
+            override fun onStartTrackingTouch(seekBar: android.widget.SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(seekBar: android.widget.SeekBar?) {
+            }
+        })
+
     }
 
 
@@ -158,6 +188,9 @@ class GrabadoraActivity : BaseActivity() {
                 setDataSource(fileName)
                 // Preparamos el MediaPlayer
                 prepare()
+                // se le asigna el volumen y la velocidad
+                setVolume(binding.audioSeekBar.progress/100f , binding.audioSeekBar.progress/100f);
+                playbackParams.setSpeed(binding.audioSeekBar.progress/100f);
                 // Comenzamos a reproducir el audio
                 start()
                 // Mostramos un mensaje indicando que el audio está reproduciéndose
