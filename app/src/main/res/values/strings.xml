@@ -6,4 +6,6 @@
     <string name="pagina_principal">Pagina principal</string>
     <string name="grabadoraAudio">Grabadora de audio</string>
     <string name="funcionalidadesVarias">Funcionalidades varias</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
